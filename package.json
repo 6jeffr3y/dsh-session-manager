@@ -23,6 +23,7 @@
   ],
   "files": [
     "cordis.patch.yml",
+    "docs/images/*.png",
     "lib/*.js",
     "README.md",
     "LICENSE"

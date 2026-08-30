@@ -10,6 +10,8 @@
 
 </div>
 
+![DSH Session Manager](docs/images/session-manager.png)
+
 ## 功能
 
 - 归档、查看和恢复会话。
