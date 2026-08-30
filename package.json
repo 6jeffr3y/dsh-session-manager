@@ -1,0 +1,64 @@
+{
+  "name": "dsh-plugin-session-manager",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./lib/index.js",
+  "description": "DeepSeek Harness session archive, restore, tagging, favorites and safe deletion UI",
+  "license": "MIT",
+  "author": {
+    "name": "6jeffr3y",
+    "url": "https://github.com/6jeffr3y"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/6jeffr3y/dsh-session-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/6jeffr3y/dsh-session-manager/issues"
+  },
+  "homepage": "https://github.com/6jeffr3y/dsh-session-manager#readme",
+  "keywords": [
+    "dsh-plugin",
+    "session-management"
+  ],
+  "files": [
+    "cordis.patch.yml",
+    "lib/*.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "check": "node --check lib/index.js && node --check lib/client.js && node --test tests/*.test.js",
+    "pack:check": "npm pack --dry-run --ignore-scripts"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "devDependencies": {
+    "@deepseek-ai/schemastery": "3.18.1"
+  }
+}
