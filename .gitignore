@@ -2,3 +2,4 @@ node_modules/
 *.tgz
 coverage/
 output/
+.playwright-cli/
