@@ -50,7 +50,7 @@
 要求已经安装 DeepSeek Harness，并使用 Node.js `^22.19.0 || >=24`。
 
 ```sh
-dsh plugin --profile web add github:6jeffr3y/dsh-session-manager#v0.1.0
+dsh plugin --profile web add github:6jeffr3y/dsh-session-manager#v0.1.1
 ```
 
 重启 Web profile 后生效：
@@ -91,7 +91,7 @@ dsh plugin --profile web remove dsh-plugin-session-manager
 
 ## 兼容性
 
-当前版本针对 DeepSeek Harness `0.1.2-alpha.1` 开发和测试。DSH 仍处于预发布阶段；Workspace 或 Session 内部接口发生变化时，本插件会明确失败，不直接修改未知格式的数据。
+当前版本针对 DeepSeek Harness `0.2.1-alpha.1` 开发和测试。DSH 仍处于预发布阶段；Workspace 或 Session 内部接口发生变化时，本插件会明确失败，不直接修改未知格式的数据。
 
 ## 本地开发
 
