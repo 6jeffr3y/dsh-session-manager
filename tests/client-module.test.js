@@ -191,7 +191,7 @@ test('title navigation restores an archived session before opening it', async ()
         },
       },
     },
-    sessions: { open: sessionId => { opened.push(sessionId) } },
+    uiWorkspace: { openSession: sessionId => { opened.push(sessionId) } },
     workspaces: {
       list: {
         getSnapshot: () => snapshot,
