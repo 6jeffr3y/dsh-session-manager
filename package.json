@@ -72,6 +72,6 @@
     "@deepseek-ai/dsh-tools": "^0.2.2-rc.3"
   },
   "devDependencies": {
-    "@deepseek-ai/dsh-tools": "0.2.2-rc.3"
+    "@deepseek-ai/dsh-tools": "0.2.2-rc.5"
   }
 }
