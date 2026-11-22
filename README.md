@@ -54,7 +54,7 @@
 要求已经安装 DeepSeek Harness，并使用 Node.js `^22.19.0 || >=24`。
 
 ```sh
-dsh plugin --profile web add github:6jeffr3y/dsh-session-manager#v0.1.2
+dsh plugin --profile web add github:6jeffr3y/dsh-session-manager#v0.1.3
 ```
 
 重启 Web profile 后生效：
