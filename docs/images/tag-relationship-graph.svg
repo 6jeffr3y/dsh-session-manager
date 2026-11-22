@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Session relationship graph</title>
+  <desc id="desc">Generic example. Session nodes connect to target unit tags, developer names, and ordinary tags.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#eef3ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#233a7a" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" rx="28" fill="url(#bg)"/>
+  <text x="64" y="74" font-family="system-ui, sans-serif" font-size="30" font-weight="700" fill="#18233f">Session relationship graph</text>
+  <text x="64" y="110" font-family="system-ui, sans-serif" font-size="16" fill="#64708f">Generic example. All labels are fictional.</text>
+
+  <g stroke="#c9d3ea" stroke-width="2">
+    <line x1="330" y1="330" x2="600" y2="250"/>
+    <line x1="330" y1="330" x2="600" y2="410"/>
+    <line x1="330" y1="330" x2="860" y2="250"/>
+    <line x1="330" y1="330" x2="860" y2="470"/>
+    <line x1="600" y1="250" x2="860" y2="250"/>
+    <line x1="600" y1="410" x2="860" y2="470"/>
+    <line x1="600" y1="410" x2="600" y2="570"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="330" cy="330" r="24" fill="#4c7dff"/>
+    <circle cx="600" cy="250" r="22" fill="#8b6ad9"/>
+    <circle cx="600" cy="410" r="22" fill="#4fb3a6"/>
+    <circle cx="600" cy="570" r="22" fill="#e08a3c"/>
+    <circle cx="860" cy="250" r="18" fill="#4c7dff"/>
+    <circle cx="860" cy="470" r="18" fill="#8b6ad9"/>
+  </g>
+
+  <g font-family="system-ui, sans-serif" font-size="18" fill="#1d2947">
+    <text x="370" y="325">Session A</text>
+    <text x="370" y="350" font-size="14" fill="#6c7895">Current session</text>
+    <text x="635" y="245">Unit A</text>
+    <text x="635" y="405">Tag A</text>
+    <text x="635" y="565">Developer A</text>
+    <text x="890" y="245">Session B</text>
+    <text x="890" y="465">Unit B</text>
+  </g>
+
+  <g font-family="system-ui, sans-serif" font-size="14" fill="#596785">
+    <circle cx="72" cy="660" r="7" fill="#4c7dff"/><text x="88" y="665">Sessions</text>
+    <circle cx="164" cy="660" r="7" fill="#8b6ad9"/><text x="180" y="665">Unit tags</text>
+    <circle cx="320" cy="660" r="7" fill="#4fb3a6"/><text x="336" y="665">Tags</text>
+    <circle cx="448" cy="660" r="7" fill="#e08a3c"/><text x="464" y="665">Developers</text>
+  </g>
+</svg>

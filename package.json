@@ -1,9 +1,9 @@
 {
   "name": "dsh-plugin-session-manager",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "main": "./lib/index.js",
-  "description": "DeepSeek Harness session archive, restore, tagging, favorites and safe deletion UI",
+  "description": "DeepSeek Harness session tagging, official archive/pin integration and safe deletion UI",
   "license": "MIT",
   "author": {
     "name": "6jeffr3y",
@@ -19,7 +19,15 @@
   "homepage": "https://github.com/6jeffr3y/dsh-session-manager#readme",
   "keywords": [
     "dsh-plugin",
-    "session-management"
+    "deepseek-harness",
+    "session-management",
+    "session-manager",
+    "archive",
+    "tagging",
+    "ai",
+    "llm",
+    "agent",
+    "developer-tools"
   ],
   "files": [
     "cordis.patch.yml",
@@ -33,11 +41,12 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "check": "node --check lib/index.js && node --check lib/client.js && node --test tests/*.test.js",
+    "check": "node --check lib/index.js && node --check lib/client.js && node --check lib/tools.js && node --test tests/*.test.js",
     "pack:check": "npm pack --dry-run --ignore-scripts"
   },
   "engines": {
-    "node": "^22.19.0 || >=24"
+    "node": "^22.19.0 || >=24",
+    "dsh": ">=0.2.2-rc.3 <0.3.0"
   },
   "dsh": {
     "client": {
@@ -47,6 +56,7 @@
         "@deepseek-ai/dsh-client-connection",
         "@deepseek-ai/dsh-client-locale",
         "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-ui-theme",
         "@deepseek-ai/dsh-client-ui-workspace",
         "@deepseek-ai/dsh-client-ui-sidebar"
       ]
@@ -56,6 +66,12 @@
     }
   },
   "dependencies": {
-    "@deepseek-ai/schemastery": "^3.18.1"
+    "@deepseek-ai/schemastery": "^3.19.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "^0.2.2-rc.3"
+  },
+  "devDependencies": {
+    "@deepseek-ai/dsh-tools": "0.2.2-rc.3"
   }
 }

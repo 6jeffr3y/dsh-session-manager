@@ -3,5 +3,4 @@
       name: dsh-plugin-session-manager
       config:
         stateDir: ''
-        improveNonDeepSeekTitles: true
         autoLoadFullHistory: true
